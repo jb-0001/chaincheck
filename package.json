@@ -1,0 +1,90 @@
+{
+  "name": "chaincheck",
+  "version": "1.0.0",
+  "description": "Validate cryptocurrency and blockchain addresses offline — Bitcoin, Ethereum, Solana, Monero, XRP, Cardano, Avalanche, NEAR, Aptos, Zcash, Tron and more. Regex + cryptographic checksum verification, TypeScript-first, zero network calls.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "crypto",
+    "cryptocurrency",
+    "blockchain",
+    "address",
+    "validator",
+    "validation",
+    "address-validator",
+    "address-validation",
+    "wallet-address",
+    "bitcoin",
+    "btc",
+    "ethereum",
+    "eth",
+    "evm",
+    "solana",
+    "sol",
+    "monero",
+    "xmr",
+    "ripple",
+    "xrp",
+    "cardano",
+    "ada",
+    "avalanche",
+    "avax",
+    "near",
+    "aptos",
+    "zcash",
+    "zec",
+    "tron",
+    "trx",
+    "polygon",
+    "matic",
+    "arbitrum",
+    "optimism",
+    "base",
+    "binance",
+    "bnb",
+    "bsc",
+    "litecoin",
+    "ltc",
+    "dogecoin",
+    "doge",
+    "bitcoin-cash",
+    "bch",
+    "eip55",
+    "bech32",
+    "base58",
+    "checksum",
+    "offline",
+    "typescript"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@noble/hashes": "^1.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "tsup": "^8.3.0",
+    "typescript": "^5.7.0",
+    "vitest": "^2.1.0"
+  }
+}

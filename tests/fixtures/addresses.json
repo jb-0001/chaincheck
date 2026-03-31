@@ -1,0 +1,112 @@
+{
+  "bitcoin": {
+    "valid": [
+      { "address": "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa", "type": "p2pkh", "note": "Genesis block coinbase P2PKH" },
+      { "address": "1BgGZ9tcN4s5FVrTU9ZVhafwznwo7ugEv8", "type": "p2pkh" },
+      { "address": "1GUzLEEZyTckU5G3dU1Wd1vweKtdAHH7hA", "type": "p2pkh" },
+      { "address": "3J98t1WpEZ73CNmQviecrnyiWrnqRhWNLy", "type": "p2sh" },
+      { "address": "3FZbgi29cpjq2GjdwV8eyHuJJnkLtktZc5", "type": "p2sh" },
+      { "address": "bc1qw508d6qejxtdg4y5r3zarvary0c5xw7kv8f3t4", "type": "bech32", "note": "P2WPKH" },
+      { "address": "bc1qrp33g0q5c5txsp9arysrx4k6zdkfs4nce4xj0gdcccefvpysxf3qccfmv3", "type": "bech32", "note": "P2WSH" },
+      { "address": "bc1p5d7rjq7g6rdk2yhzks9smlaqtedr4dekq08ge8ztwac72sfr9rusxg3297", "type": "bech32m", "note": "Taproot P2TR" }
+    ],
+    "invalid": [
+      { "address": "", "reason": "empty string" },
+      { "address": "1A1zP1eP5QGefi2DMPTfTL5SLmv7Divf2", "reason": "bad checksum (last char changed)" },
+      { "address": "1A1zP1eP5QGefi2DMPTfTL5SLmv7Divf", "reason": "too short" },
+      { "address": "0x742d35Cc6634C0532925a3b844Bc454e4438f44e", "reason": "EVM address" },
+      { "address": "bc2qw508d6qejxtdg4y5r3zarvary0c5xw7kv8f3t4", "reason": "wrong HRP" },
+      { "address": "1A1zP1eP5QGefi2DMPTfTL5SLmv7Divf1l", "reason": "invalid character l" }
+    ]
+  },
+  "bitcoinCash": {
+    "valid": [
+      { "address": "bitcoincash:qpm2qsznhks23z7629mms6s4cwef74vcwvy22gdx6a", "type": "cashaddr" },
+      { "address": "bitcoincash:qr95sy3j9xwd2ap32xkykttr4cvcu7as4y0qc02d7y", "type": "cashaddr" },
+      { "address": "qpm2qsznhks23z7629mms6s4cwef74vcwvy22gdx6a", "type": "cashaddr", "note": "without prefix" },
+      { "address": "1BgGZ9tcN4s5FVrTU9ZVhafwznwo7ugEv8", "type": "p2pkh", "note": "legacy" },
+      { "address": "3J98t1WpEZ73CNmQviecrnyiWrnqRhWNLy", "type": "p2sh", "note": "legacy P2SH" }
+    ],
+    "invalid": [
+      { "address": "", "reason": "empty" },
+      { "address": "bitcoincash:qpm2qsznhks23z7629mms6s4cwef74vcwvy22gdx6b", "reason": "bad checksum" },
+      { "address": "bc1qw508d6qejxtdg4y5r3zarvary0c5xw7kv8f3t4", "reason": "Bitcoin SegWit address" }
+    ]
+  },
+  "litecoin": {
+    "valid": [
+      { "address": "LaMT348PWRnrqeeWArpwQPbuanpXDZGEUz", "type": "p2pkh" },
+      { "address": "LdP8Qox1VAhCzLJNqrr74YovaWYyNBUWvL", "type": "p2pkh" },
+      { "address": "MQMcJhpWHYVeQArcZR3sBgyPZxxRtnH441", "type": "p2sh" },
+      { "address": "ltc1qw508d6qejxtdg4y5r3zarvary0c5xw7kgmn4n9", "type": "bech32" },
+      { "address": "3QJmV3qfvL9SuYo34YihAf3sRCW3qSinyC", "type": "p2sh", "note": "legacy 3-prefix" }
+    ],
+    "invalid": [
+      { "address": "", "reason": "empty" },
+      { "address": "LaMT348PWRnrqeeWArpwQPbuanpXDZGEUy", "reason": "bad checksum" },
+      { "address": "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa", "reason": "Bitcoin P2PKH address" },
+      { "address": "bc1qw508d6qejxtdg4y5r3zarvary0c5xw7kv8f3t4", "reason": "Bitcoin bech32, wrong HRP" }
+    ]
+  },
+  "dogecoin": {
+    "valid": [
+      { "address": "DH5yaieqoZN36fDVciNyRueRGvGLR3mr7L", "type": "p2pkh" },
+      { "address": "DFpN6QqFfUmMnW34CjZ4FLqYsvg6UwwnyJ", "type": "p2pkh" },
+      { "address": "DLd5sVBDGsX315SeN415An6YXTcvRbso7A", "type": "p2pkh" },
+      { "address": "DMbDViy1z4gweDFaYCyayvnPFUERB5Hymk", "type": "p2pkh" },
+      { "address": "DHh2vimDCkdpZqMRVtcr8CLWPZeXYBVYcL", "type": "p2pkh" }
+    ],
+    "invalid": [
+      { "address": "", "reason": "empty" },
+      { "address": "DH5yaieqoZN36fDVciNyRueRGvGLR3mr7K", "reason": "bad checksum" },
+      { "address": "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa", "reason": "Bitcoin address" },
+      { "address": "DABC", "reason": "too short" }
+    ]
+  },
+  "evm": {
+    "valid": [
+      { "address": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045", "type": "eip55", "note": "Vitalik's address" },
+      { "address": "0x742d35Cc6634C0532925a3b844Bc454e4438f44e", "type": "eip55" },
+      { "address": "0x0000000000000000000000000000000000000000", "type": "hex", "note": "all lowercase" },
+      { "address": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF", "type": "hex", "note": "all uppercase" },
+      { "address": "0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe", "type": "eip55", "note": "Ethereum foundation" }
+    ],
+    "invalid": [
+      { "address": "", "reason": "empty" },
+      { "address": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96046", "reason": "bad EIP-55 checksum (last char)" },
+      { "address": "0xd8da6bf26964af9d7eed9e03e53415d37aa96045abc", "reason": "too long" },
+      { "address": "742d35Cc6634C0532925a3b844Bc454e4438f44e", "reason": "missing 0x prefix" },
+      { "address": "0xGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG", "reason": "invalid hex chars" }
+    ]
+  },
+  "tron": {
+    "valid": [
+      { "address": "TJCnKsPa7y5okkXvQAidZBzqx3QyQ6sxMW", "type": "base58" },
+      { "address": "TLyqzVGLV1srkB7dToTAEqgDSfPtXRJZYH", "type": "base58" },
+      { "address": "TN3W4H6rK2ce4vX9YnFQHwKENnHjoxb3m9", "type": "base58" },
+      { "address": "TLeUZDGLWnz2Qfv64RDDDjN5uah7N2gSww", "type": "base58" },
+      { "address": "TRTCLHcJ8BjhdFKgDjfE9Ad5Z7dwJu5Zyk", "type": "base58" }
+    ],
+    "invalid": [
+      { "address": "", "reason": "empty" },
+      { "address": "TJCnKsPa7y5okkXvQAidZBzqx3QyQ6sxMX", "reason": "bad checksum" },
+      { "address": "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa", "reason": "Bitcoin address" },
+      { "address": "TJCnKsPa7y5okkXvQAidZBzqx3QyQ6sx", "reason": "too short" }
+    ]
+  },
+  "solana": {
+    "valid": [
+      { "address": "9WzDXwBbmkg8ZTbNMqUxvQRAyrZzDsGYdLVL9zYtAWWM", "note": "44 chars" },
+      { "address": "So11111111111111111111111111111111111111112", "note": "Wrapped SOL mint" },
+      { "address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v", "note": "USDC mint" },
+      { "address": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB", "note": "USDT mint" },
+      { "address": "11111111111111111111111111111111", "note": "System program (32 chars)" }
+    ],
+    "invalid": [
+      { "address": "", "reason": "empty" },
+      { "address": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045", "reason": "EVM address (0x prefix)" },
+      { "address": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "reason": "45 chars, too long" },
+      { "address": "0000000000000000000000000000000000000000000", "reason": "contains 0, invalid Base58 char" }
+    ]
+  }
+}
